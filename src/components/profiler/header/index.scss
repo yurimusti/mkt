@@ -1,0 +1,79 @@
+.profiler-header {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .user {
+            position: absolute;
+            background: #ffffff;
+            border: 1px solid rgba(122, 134, 154, 0.15);
+            border-radius: 50px;
+            left: 337px;
+            top: 46px;
+            width: 241px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .user img {
+            padding-top: 5px;
+            padding-left: 4px;
+        }
+
+        .user .name-user {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 24px;
+            color: #42526e;
+            opacity: 0.65;
+            position: absolute;
+        }
+
+        .user .email-user {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 8px;
+            color: #42526e;
+            opacity: 0.65;
+        }
+
+        .corp {
+            position: absolute;
+            background: #ffffff;
+            border: 1px solid rgba(122, 134, 154, 0.15);
+            border-radius: 50px;
+            left: 609px;
+            top: 46px;
+            width: 241px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .corp img {
+            padding-top: 2px;
+            padding-left: 2px;
+        }
+        .corp .name-user {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 24px;
+            color: #42526e;
+            opacity: 0.65;
+            position: absolute;
+        }
+
+        .corp .email-user {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 8px;
+            color: #42526e;
+            opacity: 0.65;
+        }
+        .logoInitial {
+            margin: 0 auto;
+            padding-top: 75px;
+        }
+    }
+}

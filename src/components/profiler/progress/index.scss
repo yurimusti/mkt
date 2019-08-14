@@ -1,0 +1,42 @@
+.profiler-progress {
+    .step {
+        margin-right: 38px;
+        p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            color: #42526e;
+            opacity: 0.65;
+            margin-left: 5px;
+        }
+    }
+
+    .progress {
+        margin-top: 4px;
+        width: 236px;
+        height: 16px;
+        background: rgba(122, 134, 154, 0.15);
+        border-radius: 50px;
+        position: relative;
+    }
+
+    .progress-intern {
+        width: 150px;
+        height: 8px;
+        background: #2f0a77;
+        border-radius: 50px;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+    }
+
+    .progress-intern-second {
+        width: 225px;
+        height: 8px;
+        background: #2f0a77;
+        border-radius: 50px;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+    }
+}

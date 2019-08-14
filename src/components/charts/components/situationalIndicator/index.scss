@@ -1,0 +1,41 @@
+.charts-situational-indicators-noAuth {
+    .circle-indicator {
+        // background: #ffffff;
+        // display: flex;
+        // flex: 1;
+        // box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+        // position: relative;
+        // width: 145px;
+        // height: 145px;
+        // // border-radius: 80px;
+        margin-top: 18px;
+        // align-items: center;
+        // text-align: center;
+        span {
+            color: #5f4a87;
+            font-size: 15px;
+            font-weight: normal;
+        }
+        .chighcharts-plot-background {
+            display: none;
+        }
+        .highcharts-credits {
+            display: none;
+        }
+        .highcharts-axis-line {
+            display: none;
+        }
+        tspan {
+            display: none;
+        }
+        .highcharts-minor-tick {
+            display: none;
+        }
+        text {
+            display: none;
+        }
+        .highcharts-root {
+            width: 180px;
+        }
+    }
+}

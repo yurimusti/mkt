@@ -1,0 +1,23 @@
+.colorful-dash {
+    display: flex;
+    .colorful-dash-red {
+        width: 25%;
+        height: 4px;
+        background: #d74149;
+    }
+    .colorful-dash-yellow {
+        width: 25%;
+        height: 4px;
+        background: #ffba00;
+    }
+    .colorful-dash-blue {
+        width: 25%;
+        height: 4px;
+        background: #00c9db;
+    }
+    .colorful-dash-green {
+        width: 25%;
+        height: 4px;
+        background: #57dd6d;
+    }
+}

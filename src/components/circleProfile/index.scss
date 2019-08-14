@@ -1,0 +1,1683 @@
+.list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text {
+        font-size: 20px !important;
+    }
+
+    .content-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .ultimo {
+            font-size: 14px !important;
+            font-weight: 200 !important;
+            color: #f2994a !important;
+        }
+
+        .date {
+            font-size: 14px !important;
+            font-weight: 200 !important;
+            color: #f2994a !important;
+        }
+    }
+
+    .circle-info-P {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 3px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #7fbb42 0%, #7fbb42 100%) !important;
+    }
+
+    .circle-info-A {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #32a0da 0%, #32a0da 100%);
+    }
+
+    .circle-info-C {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #fdb813 0%, #fdb813 100%);
+    }
+
+    .circle-info-E {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #f05125 0%, #f05125 100%);
+    }
+
+    .circle-info-AP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 3px !important;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #32a0da 0%, #7fbb42 100%);
+    }
+
+    .circle-info-APC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 3px !important;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #32a0da 0%,
+                #7fbb42 50%,
+                #fdb813 50%
+            );
+    }
+
+    .circle-info-APE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 3px !important;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #32a0da 0%,
+                #7fbb42 50%,
+                #f05125 50%
+            );
+    }
+
+    .circle-info-PA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #7fbb42 0%, #32a0da 100%);
+    }
+
+    .circle-info-PAC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #7fbb42 0%,
+                #32a0da 50%,
+                #fdb813 50%
+            );
+    }
+
+    .circle-info-PAE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #7fbb42 0%,
+                #32a0da 50%,
+                #f05125 50%
+            );
+    }
+
+    .circle-info-AC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #32a0da 0%, #fdb813 100%);
+    }
+
+    .circle-info-ACP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #32a0da 0%,
+                #fdb813 50%,
+                #7fbb42 50%
+            );
+    }
+
+    .circle-info-ACE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #32a0da 0%,
+                #fdb813 50%,
+                #f05125 50%
+            );
+    }
+
+    .circle-info-CA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #fdb813 0%, #32a0da 100%);
+    }
+
+    .circle-info-CAP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #fdb813 0%,
+                #32a0da 50%,
+                #7fbb42 50%
+            );
+    }
+
+    .circle-info-CAE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #fdb813 0%,
+                #32a0da 50%,
+                #f05125 50%
+            );
+    }
+
+    .circle-info-EA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #f05125 0%, #32a0da 100%);
+    }
+
+    .circle-info-EAP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #f05125 0%,
+                #32a0da 50%,
+                #7fbb42 50%
+            );
+    }
+
+    .circle-info-EAC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #f05125 0%,
+                #32a0da 50%,
+                #fdb813 50%
+            );
+    }
+
+    .circle-info-AE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #32a0da 0%, #f05125 100%);
+    }
+
+    .circle-info-AEC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #32a0da 0%,
+                #f05125 50%,
+                #fdb813 50%
+            );
+    }
+
+    .circle-info-AEP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #32a0da 0%,
+                #f05125 50%,
+                #7fbb42 50%
+            );
+    }
+
+    .circle-info-PE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #7fbb42 0%, #f05125 100%);
+    }
+
+    .circle-info-PEC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #7fbb42 0%,
+                #f05125 50%,
+                #fdb813 50%
+            );
+    }
+
+    .circle-info-PEA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #7fbb42 0%,
+                #f05125 50%,
+                #32a0da 50%
+            );
+    }
+
+    .circle-info-CE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #fdb813 0%, #f05125 100%);
+    }
+
+    .circle-info-CEP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #fdb813 0%,
+                #f05125 50%,
+                #7fbb42 50%
+            );
+    }
+
+    .circle-info-CEA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #fdb813 0%,
+                #f05125 50%,
+                #32a0da 50%
+            );
+    }
+
+    .circle-info-EC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #f05125 0%, #fdb813 100%);
+    }
+
+    .circle-info-ECA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #f05125 0%,
+                #fdb813 50%,
+                #32a0da 50%
+            );
+    }
+
+    .circle-info-ECP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #f05125 0%,
+                #fdb813 50%,
+                #7fbb42 50%
+            );
+    }
+
+    .circle-info-PC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #7fbb42 0%, #fdb813 100%);
+    }
+
+    .circle-info-PCA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #7fbb42 0%,
+                #fdb813 50%,
+                #32a0da 50%
+            );
+    }
+
+    .circle-info-PCE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #7fbb42 0%,
+                #fdb813 50%,
+                #f05125 50%
+            );
+    }
+
+    .circle-info-CP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #fdb813 0%, #7fbb42 100%);
+    }
+
+    .circle-info-CPA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #fdb813 0%,
+                #7fbb42 50%,
+                #32a0da 50%
+            );
+    }
+
+    .circle-info-CPE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #fdb813 0%,
+                #7fbb42 50%,
+                #f05125 50%
+            );
+    }
+
+    .circle-info-EP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #f05125 0%, #7fbb42 100%);
+    }
+
+    .circle-info-EPA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #f05125 0%,
+                #7fbb42 50%,
+                #32a0da 50%
+            );
+    }
+
+    .circle-info-EPC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(
+                circle at left,
+                #f05125 0%,
+                #7fbb42 50%,
+                #fdb813 50%
+            );
+    }
+}
+
+.card {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text {
+        font-size: 14px !important;
+    }
+
+    .content-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .ultimo {
+            font-size: 12px !important;
+            font-weight: 200 !important;
+            color: #828282 !important;
+        }
+
+        .date {
+            font-size: 12px !important;
+            font-weight: 200 !important;
+            color: #828282 !important;
+        }
+    }
+
+    .circle-info-P {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 3px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #7fbb42 0%, #7fbb42 100%) !important;
+    }
+
+    .circle-info-A {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #32a0da 0%, #32a0da 100%);
+    }
+
+    .circle-info-C {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #fdb813 0%, #fdb813 100%);
+    }
+
+    .circle-info-E {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 4px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #f05125 0%, #f05125 100%);
+    }
+
+    .circle-info-AP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 3px !important;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #32a0da 0%, #7fbb42 100%);
+    }
+
+    .circle-info-PA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #7fbb42 0%, #32a0da 100%);
+    }
+
+    .circle-info-AC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #32a0da 0%, #fdb813 100%);
+    }
+
+    .circle-info-CA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #fdb813 0%, #32a0da 100%);
+    }
+
+    .circle-info-EA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #f05125 0%, #32a0da 100%);
+    }
+
+    .circle-info-AE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #32a0da 0%, #f05125 100%);
+    }
+
+    .circle-info-PE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #7fbb42 0%, #f05125 100%);
+    }
+
+    .circle-info-CE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #fdb813 0%, #f05125 100%);
+    }
+
+    .circle-info-EC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #f05125 0%, #fdb813 100%);
+    }
+
+    .circle-info-PC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #7fbb42 0%, #fdb813 100%);
+    }
+
+    .circle-info-CP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #fdb813 0%, #7fbb42 100%);
+    }
+
+    .circle-info-EP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+        padding: 3px;
+        border: 2px;
+        border-radius: 80px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+            radial-gradient(circle at left, #f05125 0%, #7fbb42 100%);
+    }
+}
+
+.profiler-info {
+    .info {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 22px;
+        .text {
+            font-size: 20px !important;
+        }
+
+        .content-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .ultimo {
+                font-size: 14px !important;
+                font-weight: 200 !important;
+                color: #f2994a !important;
+            }
+
+            .date {
+                font-size: 14px !important;
+                font-weight: 200 !important;
+                color: #f2994a !important;
+            }
+        }
+
+        .circle-info-P {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 3px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #7fbb42 0%, #7fbb42 100%) !important;
+        }
+
+        .circle-info-A {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #32a0da 0%, #32a0da 100%);
+        }
+
+        .circle-info-C {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #fdb813 0%, #fdb813 100%);
+        }
+
+        .circle-info-E {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #f05125 0%, #f05125 100%);
+        }
+
+        .circle-info-AP {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 3px !important;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #32a0da 0%, #7fbb42 100%);
+        }
+
+        .circle-info-PA {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #7fbb42 0%, #32a0da 100%);
+        }
+
+        .circle-info-AC {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #32a0da 0%, #fdb813 100%);
+        }
+
+        .circle-info-CA {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #fdb813 0%, #32a0da 100%);
+        }
+
+        .circle-info-EA {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #f05125 0%, #32a0da 100%);
+        }
+
+        .circle-info-AE {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #32a0da 0%, #f05125 100%);
+        }
+
+        .circle-info-PE {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #7fbb42 0%, #f05125 100%);
+        }
+
+        .circle-info-CE {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #fdb813 0%, #f05125 100%);
+        }
+
+        .circle-info-EC {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #f05125 0%, #fdb813 100%);
+        }
+
+        .circle-info-PC {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #7fbb42 0%, #fdb813 100%);
+        }
+
+        .circle-info-CP {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #fdb813 0%, #7fbb42 100%);
+        }
+
+        .circle-info-EP {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #f05125 0%, #7fbb42 100%);
+        }
+    }
+
+    .card {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        .text {
+            font-size: 14px !important;
+        }
+
+        .content-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .ultimo {
+                font-size: 12px !important;
+                font-weight: 200 !important;
+                color: #828282 !important;
+            }
+
+            .date {
+                font-size: 12px !important;
+                font-weight: 200 !important;
+                color: #828282 !important;
+            }
+        }
+
+        .circle-info-P {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 3px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #7fbb42 0%, #7fbb42 100%) !important;
+        }
+
+        .circle-info-A {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #32a0da 0%, #32a0da 100%);
+        }
+
+        .circle-info-C {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #fdb813 0%, #fdb813 100%);
+        }
+
+        .circle-info-E {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 4px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #f05125 0%, #f05125 100%);
+        }
+
+        .circle-info-AP {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 3px !important;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #32a0da 0%, #7fbb42 100%);
+        }
+
+        .circle-info-PA {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #7fbb42 0%, #32a0da 100%);
+        }
+
+        .circle-info-AC {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #32a0da 0%, #fdb813 100%);
+        }
+
+        .circle-info-CA {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #fdb813 0%, #32a0da 100%);
+        }
+
+        .circle-info-EA {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #f05125 0%, #32a0da 100%);
+        }
+
+        .circle-info-AE {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #32a0da 0%, #f05125 100%);
+        }
+
+        .circle-info-PE {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #7fbb42 0%, #f05125 100%);
+        }
+
+        .circle-info-CE {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #fdb813 0%, #f05125 100%);
+        }
+
+        .circle-info-EC {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #f05125 0%, #fdb813 100%);
+        }
+
+        .circle-info-PC {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #7fbb42 0%, #fdb813 100%);
+        }
+
+        .circle-info-CP {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #fdb813 0%, #7fbb42 100%);
+        }
+
+        .circle-info-EP {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            padding: 3px;
+            border: 2px;
+            border-radius: 80px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                radial-gradient(circle at left, #f05125 0%, #7fbb42 100%);
+        }
+    }
+}

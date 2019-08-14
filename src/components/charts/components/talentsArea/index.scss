@@ -1,0 +1,326 @@
+.containerTalents {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    .pointerBlue {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 10px;
+        height: 10px;
+        padding: 40px;
+        background: transparent;
+        border: 2px solid #2f0a77;
+        border-radius: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .point {
+            width: 10px;
+            height: 10px;
+            background: #2f0a77;
+            border-radius: 200px;
+        }
+    }
+
+    .pointerRed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 10px;
+        height: 10px;
+        padding: 40px;
+        background: transparent;
+        border: 2px solid transparent;
+        border-radius: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .point {
+            width: 10px;
+            height: 10px;
+            background: #d74149;
+            border-radius: 200px;
+        }
+    }
+
+    .line {
+        flex: 1;
+        display: flex;
+
+        &-one {
+            flex: 1;
+            height: 75px;
+            display: flex;
+
+            .first {
+                display: flex;
+                flex: 1;
+                background: #fff;
+                opacity: 0.7;
+
+                .index4 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px;
+                    border-top-left-radius: 20px;
+                    background: #ffba00;
+                }
+
+                .index7 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px 0px;
+                    background: #ffba00;
+                }
+            }
+
+            .second {
+                display: flex;
+                flex: 1;
+                background: #fff;
+                opacity: 0.7;
+
+                .index7 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px 0px;
+                    background: #57dd6d;
+                }
+
+                .index8 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px;
+                    background: #57dd6d;
+                    border-top-right-radius: 20px;
+                }
+            }
+        }
+
+        &-two {
+            height: 75px;
+            display: flex;
+            flex: 1;
+
+            .first {
+                display: flex;
+                flex: 1;
+                background: #fff;
+                opacity: 0.7;
+
+                .index3 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px 2px 0px 2px;
+                    background: #ffba00;
+                }
+
+                .index5 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px;
+                    background: #ffba00;
+                }
+
+                .index6 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px;
+                    background: #ffba00;
+                }
+            }
+
+            .second {
+                display: flex;
+                flex: 1;
+                background: #fff;
+                opacity: 0.7;
+
+                .index9 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 2;
+                    margin: 2px 0px;
+                    background: #57dd6d;
+                }
+
+                .index10 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px 2px 0px 2px;
+                    background: #57dd6d;
+                }
+            }
+        }
+
+        &-three {
+            display: flex;
+            flex: 1;
+            height: 75px;
+
+            .first {
+                display: flex;
+                flex: 1;
+                background: #fff;
+                opacity: 0.7;
+
+                .index3 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 0px 2px 2px 2px;
+                    background: #f05125;
+                }
+
+                .index2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px;
+                    background: #f05125;
+                }
+            }
+
+            .second {
+                display: flex;
+                flex: 1;
+                background: #fff;
+                opacity: 0.7;
+
+                .index12 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 2;
+                    margin: 2px 0px;
+                    background: #32a0da;
+                }
+
+                .index10 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 0px 2px 2px 2px;
+                    background: #32a0da;
+                }
+            }
+        }
+
+        &-four {
+            display: flex;
+            flex: 1;
+            height: 75px;
+
+            .first {
+                display: flex;
+                flex: 1;
+                background: #fff;
+                opacity: 0.7;
+
+                .index1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px 2px;
+                    background: #f05125;
+                    border-bottom-left-radius: 20px;
+                }
+
+                .index13 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px 0px;
+                    background: #f05125;
+                }
+            }
+
+            .second {
+                display: flex;
+                flex: 1;
+                background: #fff;
+                opacity: 0.7;
+
+                .index13 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 2;
+                    margin: 2px 0px;
+                    background: #32a0da;
+                }
+
+                .index11 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 24px;
+                    flex: 1;
+                    margin: 2px;
+                    background: #32a0da;
+                    border-bottom-right-radius: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,212 @@
+@import "../../assets/variables.scss";
+
+.button {
+    width: 100%;
+    margin-top: 3px;
+    cursor: pointer;
+    padding: 11px 10px 12px 10px;
+    border-radius: $radius-button;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+        inset 0px -4px 0px rgba(0, 0, 0, 0.15);
+    border: 0px;
+    min-width: 155px;
+    font-family: roboto-condensed;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: normal;
+    text-align: center;
+    color: #fafafa;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s;
+
+    &--block {
+        width: 100%;
+    }
+
+    &--big {
+        padding: 15px 10px;
+    }
+
+    &--icon {
+        position: relative;
+        i {
+            padding-left: 14px;
+        }
+        span {
+            position: absolute;
+            left: 55px;
+        }
+    }
+
+    &--default {
+        background: $button-secondary;
+        border: $button-secondary-border;
+        box-sizing: border-box;
+        box-shadow: 0px 2px 6px rgba(47, 10, 119, 0.35),
+            inset 0px -3px 0px rgba(47, 10, 119, 0.35);
+        border-radius: $border-radius-button;
+        color: #42526e;
+        text-shadow: 0px -1px 0px #ffffff;
+        &:hover {
+            background-color: darken(#fafafa, 10%);
+        }
+        &:focus {
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+                inset 0px 0px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+    &--warning {
+        background: $button-secondary;
+        border: $button-secondary-border;
+        box-sizing: border-box;
+        box-shadow: 0px 2px 6px rgba(47, 10, 119, 0.35),
+            inset 0px -3px 0px rgba(47, 10, 119, 0.35);
+        border-radius: 5px;
+        color: red;
+        text-shadow: 0px -1px 0px #ffffff;
+        border-radius: $border-radius-button;
+        &:hover {
+            background-color: darken(#fafafa, 10%);
+        }
+        &:focus {
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+                inset 0px 0px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+    &--link {
+        background-color: transparent;
+        color: #42526e;
+        box-shadow: unset;
+    }
+    &--primary {
+        background: $button-primary;
+        // border: 1px solid rgba(66, 82, 110, 0.65);
+        box-sizing: border-box;
+        box-shadow: 0px 2px 6px rgba(47, 10, 119, 0.35),
+            inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+        border-radius: $border-radius-button;
+        &:hover {
+            background-color: $button-primary-hover;
+        }
+        &:focus {
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+                inset 0px 0px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+    &--confirm {
+        background: #f05125;
+        box-sizing: border-box;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+            inset 0px -4px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+
+    &--fab {
+        border-radius: 50%;
+        border: 1px solid $primary-2;
+        min-width: auto;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.google {
+    background-color: $color_google;
+    width: 272px;
+    height: 40px;
+    display: table;
+    line-height: 1;
+    margin: 6px auto;
+    mix-blend-mode: normal;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+        inset 0px -2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.linkedin {
+    background-color: $color_linkedin;
+    width: 272px;
+    line-height: 1;
+    height: 40px;
+    display: table;
+    margin: 6px auto;
+    mix-blend-mode: normal;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+        inset 0px -2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.facebook {
+    background-color: $color_facebook;
+    width: 272px;
+    line-height: 1;
+    height: 40px;
+    display: table;
+    margin: 6px auto;
+    mix-blend-mode: normal;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+        inset 0px -2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.contentForgetPassword {
+    button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: table;
+        font-family: Roboto;
+        font-size: 12px;
+        color: $color-text;
+        margin: 0 auto;
+    }
+}
+
+.contentTest {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    button {
+        border: 0;
+        font-family: roboto-condensed;
+        color: #fff;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .login {
+        cursor: pointer;
+        background-color: $color_button_login;
+        width: 272px;
+        border-radius: $radius-button;
+        display: table;
+        margin: 0 auto;
+    }
+
+    .test {
+        cursor: pointer;
+        color: $color_button_login;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding-left: 3px;
+        border-radius: 10px;
+    }
+}
+
+.content-text {
+    text-align: center;
+    display: flex;
+    // padding-top: 13px;
+    .buttons-login-form {
+        width: 272px;
+    }
+}

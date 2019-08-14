@@ -1,0 +1,28 @@
+.custom-input {
+    input {
+        width: 430px;
+        height: 56px;
+        background: #fafafa;
+        border: 1px solid rgba(66, 82, 110, 0.25);
+        box-sizing: border-box;
+        box-shadow: inset 0px 1px 3px #dddddd;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #747474;
+
+        &::placeholder {
+            color: #747474;
+            font-size: 14px;
+        }
+    }
+
+    .default {
+        width: 708px;
+        padding-left: 40px;
+    }
+
+    .number {
+        width: 20%;
+        padding-left: 10px;
+    }
+}

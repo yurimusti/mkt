@@ -1,0 +1,27 @@
+@import "../../../assets/App.scss";
+
+.profiler-welcome {
+    h3 {
+        padding-top: 70px;
+        display: table;
+        margin: 0px auto;
+        color: $color-text;
+        font-family: $font-family-h3;
+        font-size: $font-size-h3;
+    }
+
+    .message {
+        text-align: center;
+        p {
+            margin-top: 30px;
+            font-size: 16px;
+            color: $color-text-opacity;
+        }
+    }
+
+    .message-welcome {
+        width: 55%;
+        display: table;
+        margin: 0 auto;
+    }
+}

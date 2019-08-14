@@ -1,0 +1,25 @@
+.profiler-breadcrumb{
+    .breadcumb {
+        display: flex;
+        position: absolute;
+        left: 337px;
+        top: 9px;
+    }
+    
+    .breadcumb > li > a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 12px;
+        color: rgba(66, 82, 110, 0.65);
+        margin-right: 10px;
+    }
+    
+    .breadcumb > li > a::after {  
+        content: " / ";
+    }
+    
+    .breadcumb > li:last-child ::after {  
+        content: "";
+    }
+}
+

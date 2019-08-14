@@ -1,0 +1,65 @@
+.form-profiler {
+    display: table;
+    margin: 0 auto;
+}
+
+.alert {
+    font-size: 12px;
+    text-align: center;
+    color: #42526e;
+    margin-left: 10px;
+}
+
+.input-custom {
+    width: 260px !important;
+    justify-content: left;
+    background: #fafafa;
+    display: block;
+    width: 430px;
+    height: 56px;
+    border: 1px solid #cccccc;
+    box-shadow: inset 0px 1px 3px #dddddd;
+    border-radius: 100px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.registerProfiler {
+    form {
+        padding-top: 38px;
+        display: table;
+        margin: 0 auto;
+    }
+    input {
+        background: #fafafa;
+        display: block;
+        /* margin: 0 auto; */
+        width: 430px;
+        height: 56px;
+        background: #fafafa;
+        border: 1px solid rgba(66, 82, 110, 0.25);
+        box-shadow: inset 0px 1px 3px #dddddd;
+        border-radius: 100px;
+        margin-bottom: 14px;
+        font-size: 16px;
+        padding-left: 20px;
+        color: #747474;
+    }
+    select {
+        background: #fafafa;
+        display: block;
+        /* margin: 0 auto; */
+        width: 430px;
+        height: 56px;
+        background: #fafafa;
+        border: 1px solid rgba(66, 82, 110, 0.25);
+        box-shadow: inset 0px 1px 3px #dddddd;
+        border-radius: 100px;
+        margin-bottom: 14px;
+        font-size: 16px;
+        padding-left: 20px;
+        color: #747474;
+    }
+    
+}

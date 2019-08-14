@@ -1,0 +1,24 @@
+.profiler-behavior {
+    .noSelection {
+        width: 256px;
+        height: 35px;
+        margin-bottom: 2px;
+        text-align: left;
+        cursor: pointer;
+        background-color: #ffffff;
+        border-radius: 100px;
+        position: relative;
+        label {
+            top: 6px;
+            left: 18px;
+            position: absolute;
+            color: #2f0a77 !important;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+        }
+        &.selected {
+            background-color: #d5cee3;
+        }
+    }
+}

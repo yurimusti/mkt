@@ -1,0 +1,37 @@
+.profiler-button {
+    .inactive {
+        background: #bfbac8;
+        border-radius: 100px;
+        display: block;
+        margin: 0 auto;
+        width: 458px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: transparent;
+        cursor: no-drop;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #efedf3;
+        text-shadow: 0px -1px 0px #ffffff;
+        margin-bottom: 87px;
+    }
+
+    .active {
+        background: #2f0a77;
+        box-shadow: 0px 2px 6px rgba(47, 10, 119, 0.35),
+            inset 0px -3px 0px rgba(47, 10, 119, 0.35);
+        border-radius: 100px;
+        border: transparent;
+        display: block;
+        color: #efedf3;
+        width: 450px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 87px;
+        cursor: pointer;
+    }
+}

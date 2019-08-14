@@ -1,0 +1,70 @@
+.compareProfilers {
+    .negative {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start;
+        span {
+            font-weight: bold;
+            font-size: 14px;
+            color: #716588;
+            margin-left: 30px;
+            margin-top: -15px;
+        }
+    }
+    .positive {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        span {
+            font-weight: bold;
+            font-size: 14px;
+            color: #716588;
+            margin-right: 30px;
+            margin-top: -15px;
+        }
+    }
+    .points {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start;
+        span {
+            font-weight: normal;
+            font-size: 10px;
+            color: #716588;
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+    }
+    .highlight {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        span {
+            font-weight: normal;
+            font-size: 10px;
+            color: #716588;
+            margin-right: 30px;
+            margin-top: -15px;
+        }
+    }
+    .executor {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .planner {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .communicator {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .analyst {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}

@@ -1,0 +1,37 @@
+.content-result-noAuth {
+    max-width: 1054px;
+    height: auto;
+    margin: 41px auto;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 60px;
+    .container-profiler {
+        padding-right: 141px;
+        padding-left: 141px;
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: -0.05em;
+        color: #2f0a77;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.05em;
+        color: #2f0a77;
+    }
+    .desc-profiler {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.05em;
+        color: #8872b2;
+    }
+}
