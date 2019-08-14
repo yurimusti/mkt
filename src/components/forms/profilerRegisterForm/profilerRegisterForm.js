@@ -27,7 +27,8 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
       position !== "" &&
       sizeCompany !== "" &&
       company !== "" &&
-      phone !== ""
+      phone !== "" &&
+      validEmail(email)
     ) {
       setBlockStep(false);
     } else {
@@ -39,34 +40,37 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    if (data === "click") {
-      const json = {
-        name: name,
-        email: email,
-        gender: gender,
-        idNumber: cpf,
-        company: company,
-        phone: phone
-      };
-      let dados = {
-        email: email,
-        Nome: name,
-        "Cargo RH": position,
-        "Tamanho de empresa": sizeCompany,
-        Empresa: company,
-        "Telefone para contato": phone,
-        identificador: "Pagina - CONARH",
-        token_rdstation: "9b051f9f415752cafe1400742dd07e6f"
-      };
-      axios.post("https://www.rdstation.com.br/api/1.2/conversions", dados, {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
-      registerFallback(json);
-    }
-  }, [data]);
+  const validEmail = value => {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(value);
+  };
+
+  const _handleSubmitForm = () => {
+    const json = {
+      name: name,
+      email: email,
+      gender: gender,
+      idNumber: cpf,
+      company: company,
+      phone: phone
+    };
+    let dados = {
+      email: email,
+      Nome: name,
+      "Cargo RH": position,
+      "Tamanho de empresa": sizeCompany,
+      Empresa: company,
+      "Telefone para contato": phone,
+      identificador: "Pagina - CONARH",
+      token_rdstation: "9b051f9f415752cafe1400742dd07e6f"
+    };
+    axios.post("https://www.rdstation.com.br/api/1.2/conversions", dados, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    registerFallback(json);
+  };
 
   return (
     <div className="registerProfiler">
@@ -209,10 +213,7 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
           id="phone"
           placeholder="Telefone com (DDD) ou WhatsApp*"
         />
-        <ButtonBlock
-          btnFallBack={blockStep}
-          dataFallback={value => setData(value)}
-        />
+        <ButtonBlock isBlock={blockStep} onClick={_handleSubmitForm} />
       </form>
     </div>
   );
