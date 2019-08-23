@@ -1,13 +1,19 @@
 import React from "react";
 import "./index.scss";
 
-const ButtonBlock = ({ isBlock, onClick }) => {
-  return (
-    <div className={`profiler-button`}>
+const ButtonBlock = ({ btnFallBack, dataFallback }) => {
+  alert(btnFallBack);
+  return btnFallBack === true ? (
+    <div className="profiler-button">
+      <button disabled className="inactive" name="btnStep">
+        Prosseguir
+      </button>
+    </div>
+  ) : (
+    <div className="profiler-button">
       <button
-        disabled={isBlock}
-        onClick={onClick}
-        className={`${isBlock ? "inactive" : "active"}`}
+        onClick={() => dataFallback("click")}
+        className="active"
         name="btnStep"
       >
         Prosseguir

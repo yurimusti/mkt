@@ -61,7 +61,7 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
       "Tamanho de empresa": sizeCompany,
       Empresa: company,
       "Telefone para contato": phone,
-      identificador: "Pagina - CONARH",
+      identificador: "conarh_2019_profiler_email",
       token_rdstation: "9b051f9f415752cafe1400742dd07e6f"
     };
     axios.post("https://www.rdstation.com.br/api/1.2/conversions", dados, {
@@ -83,14 +83,6 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
           required
           placeholder="Nome completo*"
         />
-        {/* <input
-                    onChange={event => setEmail(event.target.value)}
-                    type="email"
-                    name="email"
-                    id="email"
-                    required
-                    placeholder="email*"
-                /> */}
         <Input
           onChange={event => setEmail(event.target.value)}
           type="email"
@@ -99,15 +91,6 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
           required
           placeholder="Email*"
         />
-        {/* <input
-                    onChange={event => setCpf(event.target.value)}
-                    className="input-custom"
-                    type="text"
-                    name="cpf"
-                    id="cpf"
-                    required
-                    placeholder="CPF*"
-                /> */}
         <Input
           name="cpf"
           id="cpf"
@@ -172,39 +155,6 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
           <option value="Buscando recolocação">Buscando recolocação</option>
           <option value="Outros">Outros</option>
         </select>
-
-        {/* <Input
-                    onChange={event => setBirthDate(event.target.value)}
-                    className="input-custom"
-                    type="date"
-                    name="birthDate"
-                    id="birthDate"
-                    placeholder="Data de nascimento"
-                /> */}
-        {/* <input
-                    onChange={event => setCell(event.target.value)}
-                    className="input-custom"
-                    type="text"
-                    name="cell"
-                    id="cell"
-                    placeholder="Celular"
-                /> */}
-        {/* <Input
-                    onChange={event => setCell(event.target.value)}
-                    className="input-custom"
-                    type="cellphone"
-                    name="cell"
-                    id="cell"
-                    placeholder="Celular"
-                /> */}
-        {/* <input
-                    onChange={event => setphone(event.target.value)}
-                    className="input-custom"
-                    type="text"
-                    name="fixo"
-                    id="fixo"
-                    placeholder="Telefone"
-                /> */}
         <Input
           onChange={event => setphone(event.target.value)}
           className="input-custom"
