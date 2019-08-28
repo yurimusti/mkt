@@ -21,7 +21,6 @@ const Content = ({ profiler, infoUser, canShowAll }) => {
             data={profiler.chart_data.predominant_profiler}
             canShowAll={canShowAll}
           />
-          <AboutYou texts={profiler.profile_texts} canShowAll={canShowAll} />
         </div>
       </div>
     );

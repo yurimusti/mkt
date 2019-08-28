@@ -1,8 +1,8 @@
 import React from "react";
 import "./index.scss";
 
-const ButtonBlock = ({ btnFallBack, onClick }) => {
-  return btnFallBack === true ? (
+const ButtonBlock = ({ isBlock, onClick }) => {
+  return isBlock === true ? (
     <div className="profiler-button">
       <button disabled className="inactive" name="btnStep">
         Prosseguir

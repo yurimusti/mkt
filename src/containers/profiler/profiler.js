@@ -19,20 +19,22 @@ import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 
 function Profiler({ passportGetByToken, passportPostByToken, history }) {
-  const [blockStep, setBlockStep] = useState(false);
   const dateNow = new Date();
   const url = window.location.href.split("/");
   const [step, setStep] = useState(0);
   const [registerData, setRegisterData] = useState({});
   const [iAmChosenAdjectives, setArrayAdjectives] = useState([]);
   const [shouldBeChosenAdjectives, setArrayPerception] = useState([]);
-  const [linkGeneric, setLinkGeneric] = useState(false);
+  const [blockStep, setBlockStep] = useState(false);
+  const [linkGeneric, setLinkGeneric] = useState();
   const [getPassport, setGetPassport] = useState([]);
   const [canJumpStepFinal, setCanJumpStepFinal] = useState(false);
   const [canGetResultProfiler, canSetResultProfiler] = useState(false);
   const [profiler, setProfiler] = useState({});
   const [infoUser, setInfoUser] = useState({});
   const [testStartTime, setTestStartTime] = useState({});
+  const [avaliablesPositions, setAvaliablesPositions] = useState({});
+  const [showResult, setShowResult] = useState(false);
 
   const nextStep = () => {
     setStep(step + 1);
@@ -42,11 +44,16 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
     await passportGetByToken(url[4])
       .then(r => {
         setGetPassport(r.data);
+        setAvaliablesPositions(r.data.positions);
         if (r.data.result !== undefined) {
           setProfiler(r.data.result);
           setInfoUser(r.data);
           setStep(3);
+          setLinkGeneric(false);
+          setShowResult(true);
+        } else {
           setLinkGeneric(true);
+          setShowResult(false);
         }
       })
       .catch(err => {
@@ -64,7 +71,6 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
   useEffect(() => {
     fetchGetPassportByToken();
   }, []);
-
 
   useEffect(() => {
     if (registerData !== {}) {
@@ -120,12 +126,10 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
           canSetResultProfiler(true);
           setProfiler(res.data.result);
           setInfoUser(res.data);
-          setLinkGeneric(false);
         } else if (res.status === 200 && res.data.result === undefined) {
           canSetResultProfiler("noProfiler");
         } else {
           canSetResultProfiler(false);
-          setLinkGeneric(false);
         }
       })
       .catch(err => {
@@ -147,34 +151,39 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
   const _wizardStep = () => {
     switch (step) {
       case 0:
-        return (
-          <Fragment>
-            {step === 0 && (
-              <div className="profiler-container">
-                <ColorfulDash />
-                <Header>
-                  <img className="logoInitial" src={Smart} alt="smart" />
-                </Header>
-                <Section nameClass={"welcome"}>
-                  <Container>
-                    <Row>
-                      <Welcome getPassport={getPassport} />
-                    </Row>
-                  </Container>
-                </Section>
-                <Section nameClass={"form-profile"}>
-                  <Container>
-                    <FormProfilerRegister
-                      getPassport={getPassport}
-                      handleSubmit={nextStep}
-                      registerFallback={value => setRegisterData(value)}
-                    />
-                  </Container>
-                </Section>
-              </div>
-            )}
-          </Fragment>
-        );
+        if (linkGeneric === true) {
+          return (
+            <Fragment>
+              {step === 0 && (
+                <div className="profiler-container">
+                  <ColorfulDash />
+                  <Header>
+                    <img className="logoInitial" src={Smart} alt="smart" />
+                  </Header>
+                  <Section nameClass={"welcome"}>
+                    <Container>
+                      <Row>
+                        <Welcome getPassport={getPassport} />
+                      </Row>
+                    </Container>
+                  </Section>
+                  <Section nameClass={"form-profile"}>
+                    <Container>
+                      <FormProfilerRegister
+                        getPassport={getPassport}
+                        getPositions={avaliablesPositions}
+                        handleSubmit={nextStep}
+                        registerFallback={value => setRegisterData(value)}
+                      />
+                    </Container>
+                  </Section>
+                </div>
+              )}
+            </Fragment>
+          );
+        } else {
+          return null;
+        }
       case 1:
         return (
           <div className="profiler-container">
@@ -211,7 +220,8 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
         return (
           <Result
             profiler={profiler}
-            canShowAll={linkGeneric}
+            canShowAll={showResult}
+            isFillLink={linkGeneric}
             infoUser={infoUser}
           />
         );
