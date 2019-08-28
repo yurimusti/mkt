@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b111b42b7fb88dff5ed513067ccb598",
+    "revision": "89e8418929e0a11d481d519d4ff3d161",
     "url": "/index.html"
   },
   {
-    "revision": "976dadadab9353d221b4",
-    "url": "/static/css/main.56546c40.chunk.css"
+    "revision": "843493fa7ac519af113d",
+    "url": "/static/css/main.a6da6325.chunk.css"
   },
   {
-    "revision": "5a3b11a90e266b91f23e",
-    "url": "/static/js/2.a29c5720.chunk.js"
+    "revision": "69aa5504ce59576f9d60",
+    "url": "/static/js/2.66312bd1.chunk.js"
   },
   {
-    "revision": "976dadadab9353d221b4",
-    "url": "/static/js/main.c4d72ce5.chunk.js"
+    "revision": "843493fa7ac519af113d",
+    "url": "/static/js/main.02e73dd3.chunk.js"
   },
   {
     "revision": "83c4c2505bf97a911528",
     "url": "/static/js/runtime~main.3666ee44.js"
+  },
+  {
+    "revision": "2eb3d53097de2e06f772a3f724256cfb",
+    "url": "/static/media/F_comunicador.2eb3d530.png"
   },
   {
     "revision": "3e1af3ef546b9e6ecef9f3ba197bf7d2",
