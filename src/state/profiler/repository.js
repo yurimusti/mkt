@@ -44,3 +44,16 @@ export const resultManager = async id => {
       });
   });
 };
+
+export const rdStation = async json => {
+  return new Promise((resolve, reject) => {
+    axios
+      .post("https://www.rdstation.com.br/api/1.2/conversions", json)
+      .then(data => {
+        resolve(data);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
+};

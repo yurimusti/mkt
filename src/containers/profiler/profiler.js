@@ -18,7 +18,12 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 
-function Profiler({ passportGetByToken, passportPostByToken, history }) {
+function Profiler({
+  passportGetByToken,
+  passportPostByToken,
+  rdStation,
+  history
+}) {
   const dateNow = new Date();
   const url = window.location.href.split("/");
   const [step, setStep] = useState(0);
@@ -35,6 +40,7 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
   const [testStartTime, setTestStartTime] = useState({});
   const [avaliablesPositions, setAvaliablesPositions] = useState({});
   const [showResult, setShowResult] = useState(false);
+  const [objRd, setObjRd] = useState({});
 
   const nextStep = () => {
     setStep(step + 1);
@@ -140,6 +146,14 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
       });
   };
 
+  rdStation(objRd)
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
   useEffect(() => {
     if (canGetResultProfiler === true) {
       nextStep();
@@ -173,6 +187,7 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
                         getPassport={getPassport}
                         getPositions={avaliablesPositions}
                         handleSubmit={nextStep}
+                        jsonRdStation={value => setObjRd(value)}
                         registerFallback={value => setRegisterData(value)}
                       />
                     </Container>
@@ -239,7 +254,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   passportGetByToken: passportsService.passportGetByToken,
-  passportPostByToken: passportsService.passportPostByToken
+  passportPostByToken: passportsService.passportPostByToken,
+  rdStation: passportsService.rdStation
 };
 
 export default compose(

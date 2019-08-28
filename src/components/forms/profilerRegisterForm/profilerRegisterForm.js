@@ -4,7 +4,12 @@ import ButtonBlock from "../../profiler/buttonBlock";
 import axios from "axios";
 import Input from "../../../components/InputCustom";
 
-function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
+function FormProfilerRegister({
+  handleSubmit,
+  registerFallback,
+  getPassport,
+  jsonRdStation
+}) {
   const [blockStep, setBlockStep] = useState(true);
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
@@ -65,50 +70,47 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
       identificador: url[4],
       token_rdstation: "9b051f9f415752cafe1400742dd07e6f"
     };
-    // let dadosHubspot = {
-    //   properties: [
-    //     {
-    //       property: "cargorh",
-    //       value: "Business Partner de RH"
-    //     },
-    //     {
-    //       property: "company",
-    //       value: "Solides"
-    //     },
-    //     {
-    //       property: "email",
-    //       value: "arthurluizsantospaula@gmail.com"
-    //     },
-    //     {
-    //       property: "firstname",
-    //       value: "Arthur Da Silva"
-    //     },
-    //     {
-    //       property: "phone",
-    //       value: "31548494949"
-    //     },
-    //     {
-    //       property: "tamanho_de_empresa",
-    //       value: "De 30 a 49 funcionários"
-    //     },
-    //     {
-    //       property: "token_evento",
-    //       value:
-    //         "5c80080efd6b8a2704533273f1e56023837365f8600a91e4211333dca567cec6"
-    //     }
-    //   ]
-    // };
+    let dadosHubspot = {
+      properties: [
+        {
+          property: "cargorh",
+          value: position
+        },
+        {
+          property: "company",
+          value: company
+        },
+        {
+          property: "email",
+          value: email
+        },
+        {
+          property: "firstname",
+          value: name
+        },
+        {
+          property: "phone",
+          value: phone
+        },
+        {
+          property: "tamanho_de_empresa",
+          value: sizeCompany
+        },
+        {
+          property: "token_evento",
+          value: url[4]
+        }
+      ]
+    };
+
+    jsonRdStation(dadosRdStation);
 
     axios.post(
-      "https://www.rdstation.com.br/api/1.2/conversions",
-      dadosRdStation
+      "https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/" +
+        email +
+        "?hapikey=895c0761-9dd1-417b-812c-e54425776d64",
+      dadosHubspot
     );
-    // axios.post(
-    //   "https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/" +
-    //     email +
-    //     "?hapikey=895c0761-9dd1-417b-812c-e54425776d64",
-    //   dadosHubspot
-    // );
     registerFallback(json);
   };
 
@@ -161,6 +163,7 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
           name="sizeCompany"
           id="sizeCompany"
         >
+          <option value="Até 14 funcionários">Tamanho da empresa</option>
           <option value="Até 14 funcionários">Até 14 funcionários</option>
           <option value="De 15 a 29 funcionários">
             De 15 a 29 funcionários
