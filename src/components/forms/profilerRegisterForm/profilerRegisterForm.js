@@ -17,6 +17,7 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
   // const [birthDate, setBirthDate] = useState("");
   // const [cellPhone, setCell] = useState("");
   const [phone, setphone] = useState("");
+  const url = window.location.href.split("/");
 
   useEffect(() => {
     if (
@@ -54,21 +55,60 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
       company: company,
       phone: phone
     };
-    let dados = {
+    let dadosRdStation = {
       email: email,
       Nome: name,
       "Cargo RH": position,
       "Tamanho de empresa": sizeCompany,
       Empresa: company,
       "Telefone para contato": phone,
-      identificador: "conarh_2019_profiler_email",
+      identificador: url[4],
       token_rdstation: "9b051f9f415752cafe1400742dd07e6f"
     };
-    axios.post("https://www.rdstation.com.br/api/1.2/conversions", dados, {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
+    // let dadosHubspot = {
+    //   properties: [
+    //     {
+    //       property: "cargorh",
+    //       value: "Business Partner de RH"
+    //     },
+    //     {
+    //       property: "company",
+    //       value: "Solides"
+    //     },
+    //     {
+    //       property: "email",
+    //       value: "arthurluizsantospaula@gmail.com"
+    //     },
+    //     {
+    //       property: "firstname",
+    //       value: "Arthur Da Silva"
+    //     },
+    //     {
+    //       property: "phone",
+    //       value: "31548494949"
+    //     },
+    //     {
+    //       property: "tamanho_de_empresa",
+    //       value: "De 30 a 49 funcionários"
+    //     },
+    //     {
+    //       property: "token_evento",
+    //       value:
+    //         "5c80080efd6b8a2704533273f1e56023837365f8600a91e4211333dca567cec6"
+    //     }
+    //   ]
+    // };
+
+    axios.post(
+      "https://www.rdstation.com.br/api/1.2/conversions",
+      dadosRdStation
+    );
+    // axios.post(
+    //   "https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/" +
+    //     email +
+    //     "?hapikey=895c0761-9dd1-417b-812c-e54425776d64",
+    //   dadosHubspot
+    // );
     registerFallback(json);
   };
 
@@ -121,16 +161,21 @@ function FormProfilerRegister({ handleSubmit, registerFallback, getPassport }) {
           name="sizeCompany"
           id="sizeCompany"
         >
-          <option value="">Numero de colaboradores*</option>
           <option value="Até 14 funcionários">Até 14 funcionários</option>
-          <option value="De 15 a 29 funcionários">15 - 29 funcionários</option>
-          <option value="De 15 a 29 funcionários">30 - 49 funcionários</option>
-          <option value="De 50 a 99 funcionários">50 - 99 funcionários</option>
+          <option value="De 15 a 29 funcionários">
+            De 15 a 29 funcionários
+          </option>
+          <option value="De 30 a 49 funcionários">
+            De 30 a 49 funcionários
+          </option>
+          <option value="De 50 a 99 funcionários">
+            De 50 a 99 funcionários
+          </option>
           <option value="De 100 a 199 funcionários">
-            100 - 199 funcionários
+            De 100 a 199 funcionários
           </option>
           <option value="De 200 a 499 funcionários">
-            200 - 499 funcionários
+            De 200 a 499 funcionários
           </option>
           <option value="500 funcionários ou mais">
             500 funcionários ou mais
