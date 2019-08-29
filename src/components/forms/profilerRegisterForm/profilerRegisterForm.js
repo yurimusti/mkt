@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./index.scss";
 import ButtonBlock from "../../profiler/buttonBlock";
-import axios from "axios";
 import Input from "../../../components/InputCustom";
+import Hubspot from "hubspot";
 
 function FormProfilerRegister({
   handleSubmit,
@@ -70,7 +70,14 @@ function FormProfilerRegister({
       identificador: url[4],
       token_rdstation: "9b051f9f415752cafe1400742dd07e6f"
     };
-    let dadosHubspot = {
+   
+    const hubspot = new Hubspot({
+      apiKey: "9b051f9f415752cafe1400742dd07e6f"
+    });
+
+    jsonRdStation(dadosRdStation);
+
+    hubspot.contacts.createOrUpdate(email, {
       properties: [
         {
           property: "cargorh",
@@ -101,16 +108,8 @@ function FormProfilerRegister({
           value: url[4]
         }
       ]
-    };
+    });
 
-    jsonRdStation(dadosRdStation);
-
-    axios.post(
-      "https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/" +
-        email +
-        "?hapikey=895c0761-9dd1-417b-812c-e54425776d64",
-      dadosHubspot
-    );
     registerFallback(json);
   };
 
