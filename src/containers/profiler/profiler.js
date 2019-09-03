@@ -21,7 +21,6 @@ import { compose } from "recompose";
 function Profiler({
   passportGetByToken,
   passportPostByToken,
-  rdStation,
   history
 }) {
   const dateNow = new Date();
@@ -146,14 +145,6 @@ function Profiler({
       });
   };
 
-  rdStation(objRd)
-    .then(res => {
-      console.log(res);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-
   useEffect(() => {
     if (canGetResultProfiler === true) {
       nextStep();
@@ -187,7 +178,6 @@ function Profiler({
                         getPassport={getPassport}
                         getPositions={avaliablesPositions}
                         handleSubmit={nextStep}
-                        jsonRdStation={value => setObjRd(value)}
                         registerFallback={value => setRegisterData(value)}
                       />
                     </Container>
@@ -254,8 +244,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   passportGetByToken: passportsService.passportGetByToken,
-  passportPostByToken: passportsService.passportPostByToken,
-  rdStation: passportsService.rdStation
+  passportPostByToken: passportsService.passportPostByToken
 };
 
 export default compose(

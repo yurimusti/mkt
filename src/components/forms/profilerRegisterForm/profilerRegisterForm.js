@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./index.scss";
 import ButtonBlock from "../../profiler/buttonBlock";
 import Input from "../../../components/InputCustom";
-import Hubspot from "hubspot";
+import axios from "axios";
+import qs from "querystring";
 
 function FormProfilerRegister({
   handleSubmit,
   registerFallback,
-  getPassport,
   jsonRdStation
 }) {
   const [blockStep, setBlockStep] = useState(true);
-  const [data, setData] = useState([]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [cpf, setCpf] = useState("");
@@ -19,9 +18,7 @@ function FormProfilerRegister({
   const [company, setCompany] = useState("");
   const [sizeCompany, setSizeCompany] = useState("");
   const [position, setPosition] = useState("");
-  // const [birthDate, setBirthDate] = useState("");
-  // const [cellPhone, setCell] = useState("");
-  const [phone, setphone] = useState("");
+  const [phone, setPhone] = useState("");
   const url = window.location.href.split("/");
 
   useEffect(() => {
@@ -60,55 +57,34 @@ function FormProfilerRegister({
       company: company,
       phone: phone
     };
-    let dadosRdStation = {
+
+    let dadosHubspot = {
+      firstname: name,
       email: email,
-      Nome: name,
-      "Cargo RH": position,
-      "Tamanho de empresa": sizeCompany,
-      Empresa: company,
-      "Telefone para contato": phone,
-      identificador: url[4],
-      token_rdstation: "9b051f9f415752cafe1400742dd07e6f"
+      cargorh: position,
+      company: company,
+      phone: phone,
+      tamanho_de_empresa: sizeCompany
     };
-   
-    const hubspot = new Hubspot({
-      apiKey: "9b051f9f415752cafe1400742dd07e6f"
-    });
 
-    jsonRdStation(dadosRdStation);
+    const config = {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    };
 
-    hubspot.contacts.createOrUpdate(email, {
-      properties: [
-        {
-          property: "cargorh",
-          value: position
-        },
-        {
-          property: "company",
-          value: company
-        },
-        {
-          property: "email",
-          value: email
-        },
-        {
-          property: "firstname",
-          value: name
-        },
-        {
-          property: "phone",
-          value: phone
-        },
-        {
-          property: "tamanho_de_empresa",
-          value: sizeCompany
-        },
-        {
-          property: "token_evento",
-          value: url[4]
-        }
-      ]
-    });
+    axios
+      .post(
+        "http://mktapi.solides.com/trial/trialform",
+        qs.stringify(dadosHubspot),
+        config
+      )
+      .then(result => {
+        console.log(result);
+      })
+      .catch(err => {
+        console.log(err);
+      });
 
     registerFallback(json);
   };
@@ -117,7 +93,9 @@ function FormProfilerRegister({
     <div className="registerProfiler">
       <form id="registerProfiler" onSubmit={handleSubmit}>
         <Input
-          onChange={event => setName(event.target.value)}
+          onChange={event => {
+            setName(event.target.value);
+          }}
           type="othersInputs"
           name="name"
           id="name"
@@ -125,7 +103,9 @@ function FormProfilerRegister({
           placeholder="Nome completo*"
         />
         <Input
-          onChange={event => setEmail(event.target.value)}
+          onChange={event => {
+            setEmail(event.target.value);
+          }}
           type="email"
           name="email"
           id="email"
@@ -151,14 +131,18 @@ function FormProfilerRegister({
         </select>
         <span className="alert">Caso não exista, deixe em branco</span>
         <Input
-          onChange={event => setCompany(event.target.value)}
+          onChange={event => {
+            setCompany(event.target.value);
+          }}
           type="othersInputs"
           name="company"
           id="company"
           placeholder="Empresa*"
         />
         <select
-          onChange={event => setSizeCompany(event.target.value)}
+          onChange={event => {
+            setSizeCompany(event.target.value);
+          }}
           name="sizeCompany"
           id="sizeCompany"
         >
@@ -184,7 +168,9 @@ function FormProfilerRegister({
           </option>
         </select>
         <select
-          onChange={event => setPosition(event.target.value)}
+          onChange={event => {
+            setPosition(event.target.value);
+          }}
           name="position"
           id="position"
         >
@@ -203,7 +189,9 @@ function FormProfilerRegister({
           <option value="Outros">Outros</option>
         </select>
         <Input
-          onChange={event => setphone(event.target.value)}
+          onChange={event => {
+            setPhone(event.target.value);
+          }}
           className="input-custom"
           type="phone"
           name="phone"
