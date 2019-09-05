@@ -64,7 +64,8 @@ function FormProfilerRegister({
       cargorh: position,
       company: company,
       phone: phone,
-      tamanho_de_empresa: sizeCompany
+      tamanho_de_empresa: sizeCompany,
+      token_evento: url[4]
     };
 
     const config = {
@@ -75,7 +76,7 @@ function FormProfilerRegister({
 
     axios
       .post(
-        "http://mktapi.solides.com/trial/trialform",
+        "https://afternoon-thicket-16764.herokuapp.com/events/eventsform",
         qs.stringify(dadosHubspot),
         config
       )
