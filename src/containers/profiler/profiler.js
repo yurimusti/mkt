@@ -10,6 +10,7 @@ import StepOne from "../../components/profiler/steps/stepOne";
 import StepTwo from "../../components/profiler/steps/stepTwo";
 import Result from "./resultProfilerNoAuth";
 import ColorfulDash from "../../components/colorfulDash";
+import Moment from "moment";
 import { notification } from "antd";
 import "./index.scss";
 
@@ -18,11 +19,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 
-function Profiler({
-  passportGetByToken,
-  passportPostByToken,
-  history
-}) {
+function Profiler({ passportGetByToken, passportPostByToken, history }) {
   const dateNow = new Date();
   const url = window.location.href.split("/");
   const [step, setStep] = useState(0);
@@ -79,21 +76,7 @@ function Profiler({
 
   useEffect(() => {
     if (registerData !== {}) {
-      setTestStartTime(
-        dateNow.getFullYear() +
-          "-" +
-          dateNow.getMonth() +
-          "-" +
-          dateNow.getDay() +
-          "-" +
-          dateNow.getFullYear() +
-          " " +
-          dateNow.getHours() +
-          ":" +
-          dateNow.getMinutes() +
-          ":" +
-          dateNow.getSeconds()
-      );
+      setTestStartTime(Moment(Date.now()).format("YYYY-MM-DD H:mm:ss"));
     }
   }, [registerData]);
 
@@ -101,20 +84,7 @@ function Profiler({
     const obj1 = {
       iAmChosenAdjectives,
       testStartTime,
-      testEndTime:
-        dateNow.getFullYear() +
-        "-" +
-        dateNow.getMonth() +
-        "-" +
-        dateNow.getDay() +
-        "-" +
-        dateNow.getFullYear() +
-        " " +
-        dateNow.getHours() +
-        ":" +
-        dateNow.getMinutes() +
-        ":" +
-        dateNow.getSeconds()
+      testEndTime: Moment(Date.now()).format("YYYY-MM-DD H:mm:ss")
     };
     const obj2 = registerData;
     const result = {
@@ -122,6 +92,8 @@ function Profiler({
       ...obj2,
       shouldBeChosenAdjectives: obj3
     };
+
+    console.log(result);
 
     setBlockStep(true);
 

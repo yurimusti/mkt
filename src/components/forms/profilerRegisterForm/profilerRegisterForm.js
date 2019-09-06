@@ -74,18 +74,18 @@ function FormProfilerRegister({
       }
     };
 
-    axios
-      .post(
-        "https://afternoon-thicket-16764.herokuapp.com/events/eventsform",
-        qs.stringify(dadosHubspot),
-        config
-      )
-      .then(result => {
-        console.log(result);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    // axios
+    //   .post(
+    //     "https://afternoon-thicket-16764.herokuapp.com/events/eventsform",
+    //     qs.stringify(dadosHubspot),
+    //     config
+    //   )
+    //   .then(result => {
+    //     console.log(result);
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   });
 
     registerFallback(json);
   };
@@ -130,7 +130,6 @@ function FormProfilerRegister({
           <option value="female">Feminino</option>
           <option value="male">Não binário</option>
         </select>
-        <span className="alert">Caso não exista, deixe em branco</span>
         <Input
           onChange={event => {
             setCompany(event.target.value);
