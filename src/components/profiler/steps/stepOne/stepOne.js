@@ -34,7 +34,6 @@ const StepOne = ({ dataFallbackArr, dataFallbackJumpToStepTwo }) => {
         }
         setArr(arr);
         setLengthArr(arr.length);
-        console.log(arr);
     };
 
     return (
