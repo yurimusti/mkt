@@ -1,7 +1,19 @@
 @import "../../assets/variables.scss";
 
-body {
-    background: $color-bg;
-}
-.profiler-container-noAuth {
+.profiler-container {
+    background: #fff;
+    .registerProfiler {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        input {
+            width: 100%;
+            color: $color-bg-photo;
+        }
+        select {
+            margin-top: 14px;
+            height: 56px;
+            background: #fafafa;
+        }
+    }
 }

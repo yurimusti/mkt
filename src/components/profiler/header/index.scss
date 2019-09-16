@@ -3,7 +3,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         .user {
             position: absolute;
             background: #ffffff;
@@ -72,8 +71,9 @@
             opacity: 0.65;
         }
         .logoInitial {
-            margin: 0 auto;
             padding-top: 75px;
+            display: table;
+            margin: 0 auto;
         }
     }
 }

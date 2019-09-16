@@ -1,125 +1,139 @@
 @import "../../../../assets/App.scss";
 
 .profiler-section-two {
-    .brand {
-        padding: 20px 38px 40px 77px;
-        width: 133px;
-        height: auto;
-        @media screen and (max-width: 992px) {
-            padding-left: 20px;
-        }
+  .brand {
+    padding: 34px 38px 40px 77px;
+    width: 133px;
+    height: auto;
+    @media screen and (max-width: 992px) {
+      padding-left: 20px;
+    }
+  }
+
+  .header-form {
+    margin-left: 72px;
+    h1 {
+      font-weight: normal;
+      color: $profiler-text;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 40px;
+      font-family: Roboto;
+    }
+    p {
+      font-weight: normal;
+      color: $profiler-text;
+      font-weight: normal;
+      font-size: 16px;
+      font-family: Roboto;
+    }
+    span {
+      background: #d5cee3;
+      mix-blend-mode: multiply;
+      border-radius: 90px;
+      transform: matrix(1, -0.02, 0.07, 1, 0, 0);
+    }
+    @media screen and (max-width: 992px) {
+      margin-left: 20px;
+    }
+  }
+
+  .user-tag {
+    position: absolute;
+    left: 300px;
+    top: 0px;
+    align-items: center;
+    img {
+      margin-left: 7px;
+      border-radius: 50px;
+    }
+    .user-tag-date {
+      margin-left: 7px;
+    }
+  }
+
+  .body-form {
+    // margin-left: 76px;
+    // margin-right: 76px;
+    // display: flex;
+    margin-top: 26px;
+    @media (max-width: $big) {
+      margin-top: 20px;
+    }
+    form {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 5px;
+      // padding-left: 45px;
+      padding-left: 84px;
+
+      //Tablet Conarh
+      @media screen and (max-width: $big) {
+        grid-template-columns: repeat(3, 1fr);
+        padding-left: 5px;
+      }
+      @media screen and (max-width: $media) {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0;
+      }
+      @media screen and (max-width: $small) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    input[type="radio"]:checked + .selection {
+      border: 1px solid rgba(66, 82, 110, 0.25);
+      border-radius: 5px;
     }
 
-    .header-form {
-        margin-left: 72px;
-        h1 {
-            font-weight: normal;
-            color: $profiler-text;
-            font-weight: normal;
-            font-size: 21px;
-            line-height: 40px;
-            font-family: Roboto;
-        }
-        p {
-            font-weight: normal;
-            color: $profiler-text;
-            font-weight: normal;
-            font-size: 16px;
-            font-family: Roboto;
-        }
-        span {
-            background: #d5cee3;
-            mix-blend-mode: multiply;
-            border-radius: 90px;
-            transform: matrix(1, -0.02, 0.07, 1, 0, 0);
-        }
-        @media screen and (max-width: 992px) {
-            margin-left: 20px;
-        }
+    input[type="radio"] {
+      opacity: 0;
+      float: left;
+      width: 1px;
     }
 
-    .body-form {
-        // margin-left: 76px;
-        // margin-right: 76px;
-        // display: flex;
-        margin-top: 26px;
-        @media (max-width: $big) {
-            margin-top: 20px;
-        }
-        form {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-gap: 5px;
-            // padding-left: 45px;
-            padding-left: 84px;
-
-            //Tablet Conarh
-            @media screen and (max-width: $big) {
-                grid-template-columns: repeat(3, 1fr);
-                padding-left: 5px;
-            }
-            @media screen and (max-width: $media) {
-                grid-template-columns: repeat(2, 1fr);
-                padding-left: 0;
-            }
-            @media screen and (max-width: $small) {
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
-        input[type="radio"]:checked + .selection {
-            border: 1px solid rgba(66, 82, 110, 0.25);
-            border-radius: 5px;
-        }
-
-        input[type="radio"] {
-            opacity: 0;
-            float: left;
-            width: 1px;
-        }
-
-        input[type="radio"] + label {
-            font-family: Roboto;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: normal;
-            text-transform: capitalize;
-            color: $profiler-text;
-            line-height: 1.5;
-        }
+    input[type="radio"] + label {
+      font-family: Roboto;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: normal;
+      text-transform: capitalize;
+      color: $profiler-text;
+      line-height: 1.5;
     }
+  }
 
-    .next-step {
-        button {
-            background: #bfbac8;
-            border-radius: 100px;
-            color: #efedf3;
-            font-size: 14px;
-            width: 225px;
-            padding: 12px 0;
-            border: transparent;
-            float: right;
-            cursor: no-drop;
-            margin-right: 24px;
-            margin-top: 13px;
-            text-transform: uppercase;
-            font-weight: bold;
-            &.active {
-                background: #ffffff;
-                border-radius: 100px;
-                color: #2f0a77;
-                font-size: 14px;
-                width: 225px;
-                padding: 12px 0;
-                border: 1px solid #8872b2;
-                float: right;
-                box-shadow: 0px 2px 6px rgba(47, 10, 119, 0.35),
-                    inset 0px -3px 0px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-                margin-right: 24px;
-                margin-top: 13px;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
-        }
+  .next-step {
+    button {
+      background: #bfbac8;
+      border-radius: 100px;
+      color: #efedf3;
+      font-size: 14px;
+      width: 225px;
+      padding: 12px 0;
+      border: transparent;
+      float: right;
+      cursor: no-drop;
+      margin-right: 24px;
+      margin-top: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      &.active {
+        background: #ffffff;
+        border-radius: 100px;
+        color: #2f0a77;
+        font-size: 14px;
+        width: 225px;
+        padding: 12px 0;
+        border: 1px solid #8872b2;
+        float: right;
+        box-shadow: 0px 2px 6px rgba(47, 10, 119, 0.35),
+          inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        margin-right: 24px;
+        margin-top: 13px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
     }
+  }
 }

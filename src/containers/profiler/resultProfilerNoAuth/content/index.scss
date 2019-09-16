@@ -1,37 +1,176 @@
+@import "../../../../assets/variables.scss";
+
 .content-result-noAuth {
-    max-width: 1054px;
-    height: auto;
-    margin: 41px auto;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    text-align: center;
-    padding-bottom: 60px;
+    background: $color-bg;
+    display: flex;
+    justify-content: center;
+    .colorful-dash {
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
     .container-profiler {
-        padding-right: 141px;
-        padding-left: 141px;
-    }
-    h1 {
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 37px;
-        letter-spacing: -0.05em;
-        color: #2f0a77;
-    }
-    h2 {
-        font-weight: bold;
-        font-size: 21px;
-        line-height: 130%;
-        text-align: center;
-        letter-spacing: -0.05em;
-        color: #2f0a77;
-    }
-    .desc-profiler {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 130%;
-        text-align: center;
-        letter-spacing: -0.05em;
-        color: #8872b2;
+        max-width: 1058px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        justify-content: center;
+        align-items: center;
+        margin-top: 18px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        @media screen and(max-width: $big){
+            margin-top: 0;
+        }
+        
+        h1 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+            margin-bottom: 80px;
+            color: $color-title-modal;
+        }
+        h2 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 21px;
+            line-height: 130%;
+            text-align: center;
+            color: $color-title-modal;
+        }
+        .desc-profiler {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            color: $color-text;
+        }
+
+        .infoUser-noAuth {
+            .img-user {
+                display: table;
+                margin: 0 auto;
+                padding-top: 63px;
+            }
+            .profiler-info {
+                .info {
+                    margin-top: 40px;
+                }
+            }
+            .desc-collaborator {
+                margin-top: 37px;
+                text-align: center;
+
+                .name-collaborator {
+                    font-family: Roboto-Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 24px;
+                    line-height: 34px;
+                    text-align: center;
+                    color: #2f0a77;
+                }
+                p {
+                    margin: 0;
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-align: center;
+                    color: $button-secondary-border;
+                }
+                h2 {
+                    color: #343976;
+                    font-weight: normal;
+                    text-align: center;
+                }
+            }
+
+        }
+        .row-about-you {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: baseline;
+            h2 {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 130%;
+                color: $color-text;
+                text-align: left;
+                margin: 0;
+            }
+            p {
+                margin: 0;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 130%;
+                color: $color-text;
+                text-align: left;
+                max-width: 187px;
+            }
+            @media screen and (max-width: $media){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                h2 {
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+        .others-relationship {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            h2 {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 130%;
+                color: $color-text;
+                text-align: left;
+                margin: 0;
+            }
+            p {
+                margin: 0;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 130%;
+                color: $color-text;
+                text-align: left;
+                max-width: 187px;
+            }
+            @media screen and (max-width: $media){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                h2 {
+                    margin-top: 70px;
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+
     }
 }

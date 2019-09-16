@@ -1,5 +1,5 @@
 import axios from "axios";
-//arthur esteve aqui
+import qs from "querystring";
 
 export const passportGetByToken = async token => {
   return new Promise((resolve, reject) => {
@@ -32,23 +32,19 @@ export const passportPostByToken = async (token, data) => {
   });
 };
 
-export const resultManager = async id => {
+export const hubspot = async json => {
+  const config = {
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    }
+  };
   return new Promise((resolve, reject) => {
     axios
-      .get("https://system.solides.com/pt-BR/api/v2/passports/" + id)
-      .then(data => {
-        resolve(data);
-      })
-      .catch(err => {
-        reject(err);
-      });
-  });
-};
-
-export const rdStation = async json => {
-  return new Promise((resolve, reject) => {
-    axios
-      .post("https://www.rdstation.com.br/api/1.2/conversions", json)
+      .post(
+        "https://mktapi.solides.com/events/eventsform",
+        qs.stringify(json),
+        config
+      )
       .then(data => {
         resolve(data);
       })

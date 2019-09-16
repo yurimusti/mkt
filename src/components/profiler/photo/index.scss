@@ -1,0 +1,42 @@
+@import "../../../assets/variables.scss";
+
+.profiler-photo {
+    display: flex 1;
+    flex-direction: row;
+    margin-top: 40px;
+    p {
+        padding-top: 10px;
+        display: table;
+        color: $button-secondary-border;
+        font-size: 12px;
+        font-style: italic;
+        margin: 10px auto;
+    }
+
+    .send-photo {
+        width: 128px;
+        height: 128px;
+        background-color: $text-button-secondary;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        span {
+            position: absolute;
+            left: 16px;
+            top: 55px;
+            color: #fff;
+            letter-spacing: -0.1px;
+        }
+    }
+
+    .image-send {
+        width: 128px;
+        height: 128px;
+        border-radius: 100px;
+        padding: 0;
+        display: table;
+        margin: 0 auto;
+    }
+}

@@ -8,6 +8,7 @@ import qs from "querystring";
 function FormProfilerRegister({
   handleSubmit,
   registerFallback,
+  registerFallbackHubspot,
   jsonRdStation
 }) {
   const [blockStep, setBlockStep] = useState(true);
@@ -74,19 +75,7 @@ function FormProfilerRegister({
       }
     };
 
-    // axios
-    //   .post(
-    //     "https://afternoon-thicket-16764.herokuapp.com/events/eventsform",
-    //     qs.stringify(dadosHubspot),
-    //     config
-    //   )
-    //   .then(result => {
-    //     console.log(result);
-    //   })
-    //   .catch(err => {
-    //     console.log(err);
-    //   });
-
+    registerFallbackHubspot(dadosHubspot);
     registerFallback(json);
   };
 

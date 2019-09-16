@@ -15,6 +15,7 @@ const Content = ({ profiler, infoUser, canShowAll }) => {
           <WarningProfiler
             text={profiler.test_validation}
             canShowAll={canShowAll}
+            infoUser={infoUser}
           />
           <ResultProfiler
             infoUser={infoUser}

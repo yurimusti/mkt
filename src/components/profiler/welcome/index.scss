@@ -1,6 +1,9 @@
 @import "../../../assets/App.scss";
 
 .profiler-welcome {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
     h3 {
         padding-top: 70px;
         display: table;

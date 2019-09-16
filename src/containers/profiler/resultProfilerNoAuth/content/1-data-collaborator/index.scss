@@ -8,6 +8,8 @@
         padding-top: 50px;
     }
     .desc-collaborator {
+        display: flex;
+        flex-direction: column;
         .name-collaborator {
             font-family: Roboto-Condensed;
             font-style: normal;

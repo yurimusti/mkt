@@ -14,6 +14,6 @@ export const resultManager = id => async dispatch => {
   return repository.passportPostByToken(id);
 };
 
-export const rdStation = json => async dispatch => {
-  return repository.rdStation(json);
+export const hubspot = json => async dispatch => {
+  return repository.hubspot(json);
 };

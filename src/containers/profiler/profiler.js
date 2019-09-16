@@ -18,9 +18,14 @@ import * as passportsService from "../../state/profiler/services";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
+import Photo from "../../components/profiler/photo/photo";
 
-function Profiler({ passportGetByToken, passportPostByToken, history }) {
-  const dateNow = new Date();
+function Profiler({
+  passportGetByToken,
+  passportPostByToken,
+  hubspot,
+  history
+}) {
   const url = window.location.href.split("/");
   const [step, setStep] = useState(0);
   const [registerData, setRegisterData] = useState({});
@@ -36,6 +41,8 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
   const [testStartTime, setTestStartTime] = useState({});
   const [avaliablesPositions, setAvaliablesPositions] = useState({});
   const [showResult, setShowResult] = useState(false);
+  const [photoBase64, setPhotoBase64] = useState("");
+  const [registerDadosHubspot, setRegisterDataHubspot] = useState({});
   const [objRd, setObjRd] = useState({});
 
   const nextStep = () => {
@@ -70,6 +77,21 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
       });
   }
 
+  async function fetchDadosHubspot() {
+    await hubspot(registerDadosHubspot)
+      .then(r => {
+        console.log("SUCESSO", r);
+      })
+      .catch(err => {
+        if (err) {
+          notification.error({
+            message: "Erro referente ao inserir dados",
+            description: `${err}`
+          });
+        }
+      });
+  }
+
   useEffect(() => {
     fetchGetPassportByToken();
   }, []);
@@ -90,12 +112,13 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
     const result = {
       ...obj1,
       ...obj2,
-      shouldBeChosenAdjectives: obj3
+      shouldBeChosenAdjectives: obj3,
+      picture: photoBase64
     };
 
-    console.log(result);
-
     setBlockStep(true);
+
+    fetchDadosHubspot();
 
     passportPostByToken(url[4], result)
       .then(res => {
@@ -145,12 +168,19 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
                     </Container>
                   </Section>
                   <Section nameClass={"form-profile"}>
+                    <Photo
+                      fallbackPhoto={value => setPhotoBase64(value)}
+                      getPicture={""}
+                    />
                     <Container>
                       <FormProfilerRegister
                         getPassport={getPassport}
                         getPositions={avaliablesPositions}
                         handleSubmit={nextStep}
                         registerFallback={value => setRegisterData(value)}
+                        registerFallbackHubspot={value =>
+                          setRegisterDataHubspot(value)
+                        }
                       />
                     </Container>
                   </Section>
@@ -166,6 +196,8 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
           <div className="profiler-container">
             {step === 1 && (
               <StepOne
+                registerData={registerData}
+                photoBase64={photoBase64}
                 dataFallbackArr={value => setArrayAdjectives(value)}
                 dataFallbackJumpToStepTwo={value => {
                   if (!value) {
@@ -181,6 +213,8 @@ function Profiler({ passportGetByToken, passportPostByToken, history }) {
           <div className="profiler-container">
             {step === 2 && (
               <StepTwo
+                registerData={registerData}
+                photoBase64={photoBase64}
                 dataFallbackArr={value => {
                   setArrayPerception(value);
                 }}
@@ -216,7 +250,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   passportGetByToken: passportsService.passportGetByToken,
-  passportPostByToken: passportsService.passportPostByToken
+  passportPostByToken: passportsService.passportPostByToken,
+  hubspot: passportsService.hubspot
 };
 
 export default compose(
