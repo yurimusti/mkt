@@ -336,4 +336,15 @@ $color-bg-photo: #5f4a87;
 }
 html {
   font-family: roboto-condensed;
+
+  & , body{
+    margin: 0;
+    padding: 0;    
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  /*border: 1px solid red;*/
 }

@@ -1,4 +1,8 @@
 .profiler-section{
+    @media(max-width:960px){
+        padding-left:15px;
+        padding-right:15px;
+    }
     .welcome {
         margin-top: 54px;
     }
