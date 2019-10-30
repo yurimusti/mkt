@@ -1,6 +1,6 @@
 .profiler-behavior {
     .noSelection {
-        width: 256px;
+        width: auto;
         height: 35px;
         margin-bottom: 2px;
         text-align: left;
@@ -8,6 +8,7 @@
         background-color: #ffffff;
         border-radius: 100px;
         position: relative;
+        max-width: 100%;
         label {
             top: 6px;
             left: 18px;
