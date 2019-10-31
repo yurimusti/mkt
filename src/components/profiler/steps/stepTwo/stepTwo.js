@@ -48,7 +48,7 @@ const StepTwo = ({
         <img className="brand" src={Smart} alt="logo solides" />
         <UserTag registerData={registerData} photoBase64={photoBase64} />
         <Progress>
-          <p>Passo 1 de 3</p>
+          <p>Passo 2 de 3</p>
         </Progress>
       </Header>
       <Section nameClass={"form"}>
