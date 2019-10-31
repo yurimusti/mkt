@@ -1,12 +1,20 @@
 @import "../../../../assets/App.scss";
 
 .profiler-section-two {
+  header{
+    display: block;
+
+    @media(max-width: 500px){
+      text-align: center;
+    }
+  }
   .brand {
     padding: 34px 38px 40px 77px;
-    width: 133px;
+    /*width: 133px;*/
     height: auto;
     @media screen and (max-width: 992px) {
       padding-left: 20px;
+      padding-bottom: 0;
     }
   }
 
@@ -19,6 +27,7 @@
       font-size: 21px;
       line-height: 40px;
       font-family: Roboto;
+      
     }
     p {
       font-weight: normal;
@@ -55,6 +64,19 @@
     }
     @media screen and (max-width: 834px) {
       left: 220px;
+    }
+    @media(max-width:700px) {
+      left: auto;
+      right:30px;
+      margin-top:36px;
+    }
+    @media(max-width:500px) {
+      left: auto;
+      right:30px;
+      margin-top:36px;
+      position: static;
+      align-items: center;
+      margin: 30px auto 30px;
     }
   }
   
