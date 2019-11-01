@@ -105,7 +105,7 @@ function FormProfilerRegister({
           name="gender"
           id="gender"
         >
-          <option value>Gênero*</option>
+          <option value>Gênero**</option>
           <option value="male">Masculino</option>
           <option value="female">Feminino</option>
           <option value="male">Não binário</option>

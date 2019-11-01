@@ -68,9 +68,10 @@ const StepTwo = ({
           </div>
           <div className="body-form">
             <form className="form-check">
-              {optionsBehavior.stepOne.map(option => {
+              {optionsBehavior.stepOne.map((option,index) => {
                 return (
                   <Behavior
+                    key={index}
                     name={option.english}
                     onClick={(event, children) =>
                       _handleOnClick(event, children)
