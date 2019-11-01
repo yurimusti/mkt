@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./index.scss";
 import ButtonBlock from "../../profiler/buttonBlock";
 import Input from "../../../components/InputCustom";
-import axios from "axios";
-import qs from "querystring";
 
 function FormProfilerRegister({
-  handleSubmit,
+  wichStep,
   registerFallback,
-  registerFallbackHubspot,
-  jsonRdStation
+  registerFallbackHubspot
 }) {
   const [blockStep, setBlockStep] = useState(true);
   const [name, setName] = useState("");
@@ -49,7 +46,7 @@ function FormProfilerRegister({
     return re.test(value);
   };
 
-  const _handleSubmitForm = () => {
+  const _handleSubmitForm = e => {
     const json = {
       name: name,
       email: email,
@@ -69,19 +66,13 @@ function FormProfilerRegister({
       token_evento: url[4]
     };
 
-    const config = {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      }
-    };
-
     registerFallbackHubspot(dadosHubspot);
     registerFallback(json);
   };
 
   return (
     <div className="registerProfiler">
-      <form id="registerProfiler" onSubmit={handleSubmit}>
+      <form id="registerProfiler" onSubmit={wichStep}>
         <Input
           onChange={event => {
             setName(event.target.value);

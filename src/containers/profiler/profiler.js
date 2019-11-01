@@ -24,6 +24,7 @@ function Profiler({
   passportGetByToken,
   passportPostByToken,
   hubspot,
+  wichStep,
   history
 }) {
   const url = window.location.href.split("/");
@@ -45,7 +46,19 @@ function Profiler({
   const [registerDadosHubspot, setRegisterDataHubspot] = useState({});
   const [objRd, setObjRd] = useState({});
 
-  const nextStep = () => {
+  const nextStep = e => {
+    switch (step) {
+      case 0:
+        if (e !== undefined) {
+          e.preventDefault();
+        }
+      case 1:
+        if (e !== undefined) {
+          e.preventDefault();
+        }
+      default:
+        break;
+    }
     setStep(step + 1);
   };
 
@@ -176,7 +189,7 @@ function Profiler({
                       <FormProfilerRegister
                         getPassport={getPassport}
                         getPositions={avaliablesPositions}
-                        handleSubmit={nextStep}
+                        wichStep={nextStep}
                         registerFallback={value => setRegisterData(value)}
                         registerFallbackHubspot={value =>
                           setRegisterDataHubspot(value)
