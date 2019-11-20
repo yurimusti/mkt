@@ -4,7 +4,7 @@ import qs from "querystring";
 export const passportGetByToken = async token => {
   return new Promise((resolve, reject) => {
     axios
-      .get("https://system.solides.com/pt-BR/api/v2/passports/" + token)
+      .get("https://system.solides.com/pt/api/v2/passports/" + token)
       .then(data => {
         resolve(data);
       })
@@ -18,7 +18,7 @@ export const passportPostByToken = async (token, data) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "https://system.solides.com/pt-BR/api/v2/passports/" +
+        "https://system.solides.com/pt/api/v2/passports/" +
           token +
           "/answer",
         data
