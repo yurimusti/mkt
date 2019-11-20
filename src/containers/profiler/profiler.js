@@ -24,7 +24,6 @@ function Profiler({
   passportGetByToken,
   passportPostByToken,
   hubspot,
-  wichStep,
   history
 }) {
   const url = window.location.href.split("/");
@@ -33,11 +32,11 @@ function Profiler({
   const [step, setStep] = useState(0);
   const [registerData, setRegisterData] = useState({});
   const [iAmChosenAdjectives, setArrayAdjectives] = useState([]);
-  const [shouldBeChosenAdjectives, setArrayPerception] = useState([]);
+  const [, setArrayPerception] = useState([]);
   const [blockStep, setBlockStep] = useState(false);
   const [linkGeneric, setLinkGeneric] = useState();
   const [getPassport, setGetPassport] = useState([]);
-  const [canJumpStepFinal, setCanJumpStepFinal] = useState(false);
+  const [, setCanJumpStepFinal] = useState(false);
   const [canGetResultProfiler, canSetResultProfiler] = useState(false);
   const [profiler, setProfiler] = useState({});
   const [infoUser, setInfoUser] = useState({});
@@ -46,7 +45,6 @@ function Profiler({
   const [showResult, setShowResult] = useState(false);
   const [photoBase64, setPhotoBase64] = useState("");
   const [registerDadosHubspot, setRegisterDataHubspot] = useState({});
-  const [objRd, setObjRd] = useState({});
 
   const nextStep = e => {
     switch (step) {
@@ -54,10 +52,12 @@ function Profiler({
         if (e !== undefined) {
           e.preventDefault();
         }
+        break;
       case 1:
         if (e !== undefined) {
           e.preventDefault();
         }
+        break;
       default:
         break;
     }
@@ -109,6 +109,7 @@ function Profiler({
 
   useEffect(() => {
     fetchGetPassportByToken();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -135,7 +136,7 @@ function Profiler({
 
     fetchDadosHubspot();
 
-    passportPostByToken(url[4], result)
+    passportPostByToken(sendToken, result)
       .then(res => {
         if (res.status === 200 && res.data.result !== undefined) {
           canSetResultProfiler(true);
@@ -158,9 +159,8 @@ function Profiler({
   useEffect(() => {
     if (canGetResultProfiler === true) {
       nextStep();
-    } else if (canGetResultProfiler === "noProfiler") {
-      console.log("SUCESSO - SEM RELATÓRIO");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canGetResultProfiler]);
 
   const _wizardStep = () => {

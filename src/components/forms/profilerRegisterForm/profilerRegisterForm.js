@@ -18,6 +18,8 @@ function FormProfilerRegister({
   const [position, setPosition] = useState("");
   const [phone, setPhone] = useState("");
   const url = window.location.href.split("/");
+  const urlToken = url[4].split("?");
+  const sendToken = urlToken[0] ? urlToken[0] : url[4];
 
   useEffect(() => {
     if (
@@ -63,7 +65,7 @@ function FormProfilerRegister({
       company: company,
       phone: phone,
       tamanho_de_empresa: sizeCompany,
-      token_evento: url[4]
+      token_evento: sendToken
     };
 
     registerFallbackHubspot(dadosHubspot);
@@ -98,14 +100,14 @@ function FormProfilerRegister({
           id="cpf"
           onChange={event => setCpf(event.target.value)}
           type="cpf"
-          placeholder="CPF*"
+          placeholder="CPF* (Digite um cpf válido)"
         />
         <select
           onChange={event => setGender(event.target.value)}
           name="gender"
           id="gender"
         >
-          <option value>Gênero**</option>
+          <option value>Gênero*</option>
           <option value="male">Masculino</option>
           <option value="female">Feminino</option>
           <option value="male">Não binário</option>
@@ -126,7 +128,7 @@ function FormProfilerRegister({
           name="sizeCompany"
           id="sizeCompany"
         >
-          <option value="Até 14 funcionários">Tamanho da empresa</option>
+          <option value="">Tamanho da empresa*</option>
           <option value="Até 14 funcionários">Até 14 funcionários</option>
           <option value="De 15 a 29 funcionários">
             De 15 a 29 funcionários
