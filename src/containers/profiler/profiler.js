@@ -28,6 +28,8 @@ function Profiler({
   history
 }) {
   const url = window.location.href.split("/");
+  const urlToken = url[4].split("?");
+  const sendToken = urlToken[0] ? urlToken[0] : url[4];
   const [step, setStep] = useState(0);
   const [registerData, setRegisterData] = useState({});
   const [iAmChosenAdjectives, setArrayAdjectives] = useState([]);
@@ -63,7 +65,7 @@ function Profiler({
   };
 
   async function fetchGetPassportByToken() {
-    await passportGetByToken(url[4])
+    await passportGetByToken(sendToken)
       .then(r => {
         setGetPassport(r.data);
         setAvaliablesPositions(r.data.positions);
@@ -269,8 +271,5 @@ const mapDispatchToProps = {
 
 export default compose(
   withRouter,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )
+  connect(mapStateToProps, mapDispatchToProps)
 )(Profiler);
