@@ -41,7 +41,7 @@ export const hubspot = async json => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "https://mktapi.solides.com/events/eventsform",
+        "http://100.24.244.194:8000/events/eventsform",
         qs.stringify(json),
         config
       )
