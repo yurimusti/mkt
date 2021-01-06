@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
     "antd": "^3.20.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "core-js": "^3.3.6",
     "highcharts-react-official": "^2.2.2",
     "hubspot": "^2.3.0",
